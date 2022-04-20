@@ -71,3 +71,5 @@ Step 12.2: Plug out the power from the PLC and then power on it again after 1 mi
 ![image](https://user-images.githubusercontent.com/57984642/164304480-019154fa-1bc9-4b57-a4b0-ddc5dd700683.png)
 
 (This fundamental tutorial about how to carry out data visualisation with Node-Red for PLC, it supposes that you have basic knowledge on installing Node.js, Node-Red and XMAPP database server firstly)
+
+https://youtu.be/f-jZyoRKyII
