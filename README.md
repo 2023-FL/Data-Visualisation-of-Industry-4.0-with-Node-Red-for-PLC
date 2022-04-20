@@ -1,7 +1,6 @@
-# FrancisL
-Data Visualisation of Industry 4.0 with Node-Red for Mitsubishi PLC
+# Data Visualisation of Industry 4.0 with Node-Red for Mitsubishi PLC
 
-Installation Manual of PLC connecting with sensors and other electric device![image](https://user-images.githubusercontent.com/57984642/164304543-12fffb8d-4b5e-4099-9a33-9cc2e37b583c.png)
+## Installation Manual of PLC connecting with sensors and other electric device
 
 Step 1: To follow below diagram for connecting all electric wires between PLC, electric devices and sensors
 Installation of Temperature Sensor connected with Temperature Module of Mitsubishi PLC
@@ -11,6 +10,7 @@ Step 2: To follow below diagram for connecting electric wires of temperature sen
 ![image](https://user-images.githubusercontent.com/57984642/164303515-0740f382-fbe3-4aaa-81ef-3171929ba8e1.png)
  
 Step 3.1: Start MELSOFT GX Works application software, then go to tool bar and select “Engineering” (“工程”) as well as select “Open” (“打开”), 
+
 ![image](https://user-images.githubusercontent.com/57984642/164303552-570d76e7-d12e-4dd9-8261-9fd12a11aa27.png)
  
 Step 3.2: choose Smart-Patch_Project_LED_Motion_sensor.gx3
@@ -53,9 +53,11 @@ Step 10.1: You will see the following those node-red flows (“流程”) of (Wa
 ![image](https://user-images.githubusercontent.com/57984642/164303890-c6ebe22d-cf9b-4c1c-95a1-e2cef56cf931.png)
  
 Step 10.2: You will see that there is green signal under each blue box to show “connected” for PLC and connected in term of “OK” for Database shown as follows
+
 ![image](https://user-images.githubusercontent.com/57984642/164303913-7b60bf96-9e29-4767-9f27-18c516e42af2.png)
  
 Step 11.1: Washing Machine dashboard and Smart-Home dashboard can be shown by typing “localhost:1880/ui” on domain name bar of the browser; if want to see Smart-Home dashboard webpage, you can click on the upper left-hand side icon “                “ to show all ui webpages and then select of Home Floor Plan shown below second diagram.
+
 ![image](https://user-images.githubusercontent.com/57984642/164303933-0063b35b-5a10-46a0-898c-f302c10c64cc.png)
  
 ![image](https://user-images.githubusercontent.com/57984642/164303969-583aee2d-2b43-44de-8afe-e26e7581af99.png)
