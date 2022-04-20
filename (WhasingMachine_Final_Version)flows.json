@@ -1,0 +1,904 @@
+[
+    {
+        "id": "939a33a405b83277",
+        "type": "tab",
+        "label": "流程2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1272a13873439070",
+        "type": "MC Read",
+        "z": "939a33a405b83277",
+        "name": "Read D100 Data from FX5U",
+        "topic": "",
+        "connection": "1c30a3548092709c",
+        "address": "D100",
+        "addressType": "str",
+        "outputFormat": "1",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 140,
+        "y": 400,
+        "wires": [
+            [
+                "450ac98998e963b4",
+                "140e821e030f5b17",
+                "6f6d44649d048e29",
+                "2ecd5c8742a0587c"
+            ]
+        ]
+    },
+    {
+        "id": "b0022c13500418cf",
+        "type": "MC Write",
+        "z": "939a33a405b83277",
+        "name": "WRITE_X0_1_FX5U_192.168.1.234:502",
+        "topic": "",
+        "connection": "1c30a3548092709c",
+        "data": "1",
+        "address": "X0",
+        "addressType": "str",
+        "dataType": "str",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 300,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d71265aa1a3e3588",
+        "type": "ui_button",
+        "z": "939a33a405b83277",
+        "name": "",
+        "group": "913ed006.98b0b",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "X0_On",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 60,
+        "y": 20,
+        "wires": [
+            [
+                "b0022c13500418cf"
+            ]
+        ]
+    },
+    {
+        "id": "d9cd5c1937407482",
+        "type": "inject",
+        "z": "939a33a405b83277",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 70,
+        "y": 360,
+        "wires": [
+            [
+                "1272a13873439070",
+                "1cca876966b21d1c"
+            ]
+        ]
+    },
+    {
+        "id": "450ac98998e963b4",
+        "type": "ui_gauge",
+        "z": "939a33a405b83277",
+        "name": "",
+        "group": "913ed006.98b0b",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 350,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "140e821e030f5b17",
+        "type": "ui_chart",
+        "z": "939a33a405b83277",
+        "name": "",
+        "group": "913ed006.98b0b",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 370,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1cca876966b21d1c",
+        "type": "MC Read",
+        "z": "939a33a405b83277",
+        "name": "Read D200 Data from FX5U",
+        "topic": "",
+        "connection": "1c30a3548092709c",
+        "address": "D200",
+        "addressType": "str",
+        "outputFormat": "1",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 120,
+        "y": 460,
+        "wires": [
+            [
+                "a96a7e4a17bcbcfa"
+            ]
+        ]
+    },
+    {
+        "id": "a96a7e4a17bcbcfa",
+        "type": "ui_chart",
+        "z": "939a33a405b83277",
+        "name": "",
+        "group": "d96f9f2ea792fa91",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "label": "Power Consumption (mWatt)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 160,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6f6d44649d048e29",
+        "type": "function",
+        "z": "939a33a405b83277",
+        "name": "INSERT Statement",
+        "func": "msg.topic = \"INSERT INTO `temperature`(`temp`)VALUES(\" + msg.payload + \")\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 360,
+        "wires": [
+            [
+                "f9d1df6a14d81879"
+            ]
+        ]
+    },
+    {
+        "id": "f9d1df6a14d81879",
+        "type": "mysql",
+        "z": "939a33a405b83277",
+        "mydb": "fcca1166.add63",
+        "name": "Root_Localhost_node-red-temp_8080",
+        "x": 590,
+        "y": 360,
+        "wires": [
+            [
+                "58e8a97a09b2c78b"
+            ]
+        ]
+    },
+    {
+        "id": "58e8a97a09b2c78b",
+        "type": "debug",
+        "z": "939a33a405b83277",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "d392f74d49884a13",
+        "type": "function",
+        "z": "939a33a405b83277",
+        "name": "Get subscriptions",
+        "func": "// Use the flow variable that has been set in Demo Web Push Manager API (\"storeInFile\" context)\nmsg.subscriptions = flow.get('pushSubscriptions', \"storeInFile\") || []\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 150,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "26503b3467bb2994",
+        "type": "inject",
+        "z": "939a33a405b83277",
+        "name": "Send custom notifcation",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"notification\":{\"title\":\"Hello Node-RED user !\",\"body\":\"Click me to open your dashboard\"},\"data\":{\"silent\":true,\"requireInteraction \":true,\"icon\":\"https://nodered.org/about/resources/media/node-red-icon-2.png\",\"image\":\"https://user-images.githubusercontent.com/14224149/73395580-19bac700-42e0-11ea-90c2-71cb4f496637.png\"}}",
+        "payloadType": "json",
+        "x": 160,
+        "y": 700,
+        "wires": [
+            [
+                "c00d656eecf21558"
+            ]
+        ]
+    },
+    {
+        "id": "c00d656eecf21558",
+        "type": "change",
+        "z": "939a33a405b83277",
+        "name": "payload => notification",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "notification",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 760,
+        "wires": [
+            [
+                "d392f74d49884a13"
+            ]
+        ]
+    },
+    {
+        "id": "2ecd5c8742a0587c",
+        "type": "function",
+        "z": "939a33a405b83277",
+        "name": "",
+        "func": "var threshold = context.get('threshold')|| 60;\ncontext.set('threshold', threshold);\nmsg2 = {payload: threshold};\nvar control = (\"Temperature at \" + msg.payload + \" C degree is under control\");\nvar noncontrol = (\"Temperature at \" + msg.payload + \" C degree is out of control\");\nvar abnormal = (\"Temperature at \" + msg.payload + \" C degree is out of order or abnormal status!\");\n\nif (msg.payload < 21)\n{\n   node.status({fill:\"green\",shape:\"dot\",text:\"Temperature is under control\"});\n   msg1 = {payload: true};\n   msg3 = {payload: control};\n   return [msg1, msg3];\n} else\nif (msg.payload = 0)\n{ node.status({fill:\"yellow\",shape:\"dot\",text:\"Temperature is 0 C degree!!!\"});\n    msg1 = {payload: false};\n    msg5 = {payload: abnormal};\n    return [msg1, msg5];\n}else\nif (msg.payload > 20)\n{\n    node.status({fill:\"red\",shape:\"dot\",text:\"Temperature is 21 C degree even over!!!\"});\n    msg1 = {payload: false};\n    msg4 = {payload: noncontrol};\n    return [msg1, msg4];\n}\n    ",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 580,
+        "wires": [
+            [
+                "b34b09c2da5b0525"
+            ],
+            [
+                "89ba4c73b2cf354c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b34b09c2da5b0525",
+        "type": "ui_led",
+        "z": "939a33a405b83277",
+        "order": 1,
+        "group": "8f5f4c29e5d3317a",
+        "width": "3",
+        "height": "3",
+        "label": "Time sync",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#00ff00",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 390,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "afc28ce8.da7",
+        "type": "ui_level",
+        "z": "939a33a405b83277",
+        "group": "ba0f52dd.2f45b",
+        "order": 5,
+        "width": 1,
+        "height": 9,
+        "name": "R801-TIP-T01_SP",
+        "label": "SP",
+        "colorHi": "#e60000",
+        "colorWarn": "#ff9900",
+        "colorNormal": "#00b33c",
+        "colorOff": "#595959",
+        "min": 0,
+        "max": "150",
+        "segWarn": "50",
+        "segHigh": "130",
+        "unit": "°C",
+        "layout": "sv",
+        "channelA": "",
+        "channelB": "",
+        "decimals": 0,
+        "animations": "soft",
+        "shape": 2,
+        "colorschema": "fixed",
+        "textoptions": "custom",
+        "colorText": "#eeeeee",
+        "fontLabel": "",
+        "fontValue": "",
+        "fontSmall": "0.8",
+        "colorFromTheme": true,
+        "textAnimations": true,
+        "hideValue": false,
+        "tickmode": "off",
+        "peakmode": false,
+        "peaktime": 3000,
+        "x": 1230,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "1a223c6c.e89b44",
+        "type": "ui_level",
+        "z": "939a33a405b83277",
+        "group": "ba0f52dd.2f45b",
+        "order": 6,
+        "width": 1,
+        "height": 9,
+        "name": "R801-TIP-T01_PV",
+        "label": "PV",
+        "colorHi": "#e60000",
+        "colorWarn": "#ff9900",
+        "colorNormal": "#00b33c",
+        "colorOff": "#595959",
+        "min": 0,
+        "max": "150",
+        "segWarn": "50",
+        "segHigh": "130",
+        "unit": "°C",
+        "layout": "sv",
+        "channelA": "",
+        "channelB": "",
+        "decimals": 0,
+        "animations": "soft",
+        "shape": 2,
+        "colorschema": "fixed",
+        "textoptions": "custom",
+        "colorText": "#eeeeee",
+        "fontLabel": "",
+        "fontValue": "",
+        "fontSmall": "0.8",
+        "colorFromTheme": true,
+        "textAnimations": true,
+        "hideValue": false,
+        "tickmode": "off",
+        "peakmode": false,
+        "peaktime": 3000,
+        "x": 1230,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "c18436e9.0834f8",
+        "type": "ui_level",
+        "z": "939a33a405b83277",
+        "group": "ba0f52dd.2f45b",
+        "order": 7,
+        "width": 1,
+        "height": 9,
+        "name": "R801-TIP-T01_OUT",
+        "label": "OUT",
+        "colorHi": "#e60000",
+        "colorWarn": "#ff9900",
+        "colorNormal": "#00b33c",
+        "colorOff": "#595959",
+        "min": 0,
+        "max": "100",
+        "segWarn": "",
+        "segHigh": "",
+        "unit": "%",
+        "layout": "sv",
+        "channelA": "",
+        "channelB": "",
+        "decimals": 0,
+        "animations": "soft",
+        "shape": 2,
+        "colorschema": "fixed",
+        "textoptions": "custom",
+        "colorText": "#eeeeee",
+        "fontLabel": "",
+        "fontValue": "",
+        "fontSmall": "0.8",
+        "colorFromTheme": true,
+        "textAnimations": true,
+        "hideValue": false,
+        "tickmode": "off",
+        "peakmode": false,
+        "peaktime": 3000,
+        "x": 1240,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "a90f7a2ffdaefd62",
+        "type": "ui_button",
+        "z": "939a33a405b83277",
+        "name": "",
+        "group": "913ed006.98b0b",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "X0_Off",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 70,
+        "y": 60,
+        "wires": [
+            [
+                "19134b222b558aeb"
+            ]
+        ]
+    },
+    {
+        "id": "19134b222b558aeb",
+        "type": "MC Write",
+        "z": "939a33a405b83277",
+        "name": "WRITE_X0_0_FX5U_192.168.1.234:502",
+        "topic": "",
+        "connection": "1c30a3548092709c",
+        "data": "",
+        "address": "X0",
+        "addressType": "str",
+        "dataType": "str",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 320,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b315a6a1cf2ba660",
+        "type": "ui_button",
+        "z": "939a33a405b83277",
+        "name": "",
+        "group": "913ed006.98b0b",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "X1_Switch_On_Washing Machine",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "a129ad3cceb1dc1e"
+            ]
+        ]
+    },
+    {
+        "id": "a129ad3cceb1dc1e",
+        "type": "MC Write",
+        "z": "939a33a405b83277",
+        "name": "WRITE_X1_1_FX5U_192.168.1.234:502",
+        "topic": "",
+        "connection": "1c30a3548092709c",
+        "data": "1",
+        "address": "X1",
+        "addressType": "str",
+        "dataType": "str",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 480,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "75bccada47dfa799",
+        "type": "ui_button",
+        "z": "939a33a405b83277",
+        "name": "",
+        "group": "913ed006.98b0b",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "X1_Switch_Off_Washing Machine",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "eccc05f10fda51bd"
+            ]
+        ]
+    },
+    {
+        "id": "eccc05f10fda51bd",
+        "type": "MC Write",
+        "z": "939a33a405b83277",
+        "name": "WRITE_X1_0_FX5U_192.168.1.234:502",
+        "topic": "",
+        "connection": "1c30a3548092709c",
+        "data": "",
+        "address": "X1",
+        "addressType": "str",
+        "dataType": "str",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 480,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "89ba4c73b2cf354c",
+        "type": "ui_text",
+        "z": "939a33a405b83277",
+        "group": "8f5f4c29e5d3317a",
+        "order": 4,
+        "width": "3",
+        "height": "3",
+        "name": "",
+        "label": "Notification",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 390,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "65d2b6a9651fb609",
+        "type": "ui_webcam",
+        "z": "939a33a405b83277",
+        "name": "",
+        "group": "d96f9f2ea792fa91",
+        "order": 1,
+        "width": 0,
+        "height": 5,
+        "countdown": true,
+        "autoStart": true,
+        "hideCaptureButton": false,
+        "showImage": "2",
+        "mirror": true,
+        "format": "png",
+        "x": 360,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b8415f5b6bc94262",
+        "type": "ui_button",
+        "z": "939a33a405b83277",
+        "name": "",
+        "group": "8f5f4c29e5d3317a",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "X5_Select Washing Mode by clicking on",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 200,
+        "wires": [
+            [
+                "09cd43c88bac5fba"
+            ]
+        ]
+    },
+    {
+        "id": "09cd43c88bac5fba",
+        "type": "MC Write",
+        "z": "939a33a405b83277",
+        "name": "WRITE_X11_1_FX5U_192.168.1.234:502",
+        "topic": "",
+        "connection": "1c30a3548092709c",
+        "data": "1",
+        "address": "X5",
+        "addressType": "str",
+        "dataType": "str",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 520,
+        "y": 200,
+        "wires": [
+            [
+                "39def756e4094793"
+            ]
+        ]
+    },
+    {
+        "id": "7c28d613b4b0f43e",
+        "type": "MC Write",
+        "z": "939a33a405b83277",
+        "name": "WRITE_X11_0_FX5U_192.168.1.234:502",
+        "topic": "",
+        "connection": "1c30a3548092709c",
+        "data": "",
+        "address": "X5",
+        "addressType": "str",
+        "dataType": "str",
+        "errorHandling": "throw",
+        "outputs": 1,
+        "x": 400,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "39def756e4094793",
+        "type": "switch",
+        "z": "939a33a405b83277",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 770,
+        "y": 200,
+        "wires": [
+            [
+                "7c28d613b4b0f43e"
+            ]
+        ]
+    },
+    {
+        "id": "339cfa6335d3ec34",
+        "type": "interval-multiples-timer",
+        "z": "939a33a405b83277",
+        "interval": 5000,
+        "payload": "",
+        "topic": "",
+        "name": "Timer",
+        "x": 640,
+        "y": 260,
+        "wires": [
+            [
+                "39def756e4094793"
+            ]
+        ]
+    },
+    {
+        "id": "1c30a3548092709c",
+        "type": "MC Protocol Connection",
+        "name": "Mitsubishi FX5U",
+        "host": "192.168.1.234",
+        "port": "502",
+        "protocol": "TCP",
+        "frame": "3E",
+        "plcType": "Q",
+        "ascii": false,
+        "PLCStation": "",
+        "PCStation": "",
+        "PLCModuleNo": "",
+        "network": "",
+        "octalInputOutput": false,
+        "timeout": "10000"
+    },
+    {
+        "id": "913ed006.98b0b",
+        "type": "ui_group",
+        "name": "Washing Machine",
+        "tab": "c6fed329fcd603d6",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "d96f9f2ea792fa91",
+        "type": "ui_group",
+        "name": "Group 2 - D200",
+        "tab": "c6fed329fcd603d6",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "fcca1166.add63",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "node-red-temp",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "8f5f4c29e5d3317a",
+        "type": "ui_group",
+        "name": "Alarm",
+        "tab": "c6fed329fcd603d6",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ba0f52dd.2f45b",
+        "type": "ui_group",
+        "name": "TIC",
+        "tab": "e40aaee1.37418",
+        "order": 2,
+        "disp": true,
+        "width": 5,
+        "collapse": false
+    },
+    {
+        "id": "c6fed329fcd603d6",
+        "type": "ui_tab",
+        "name": "Washing Machine",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e40aaee1.37418",
+        "type": "ui_tab",
+        "name": "Dashboard SVG HMI demo",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
