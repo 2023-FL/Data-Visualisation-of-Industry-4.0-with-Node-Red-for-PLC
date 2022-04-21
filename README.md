@@ -74,6 +74,4 @@ Step 12.2: Plug out the power from the PLC and then power on it again after 1 mi
 
 [![Watch the video](https://img.youtube.com/vi/188UED5zLjM/0.jpg)](https://www.youtube.com/embed/188UED5zLjM "Click to play on Youtube.com")
 
-[![Youtube video]          // Title
-(https://img.youtube.com/vi/188UED5zLjM/maxresdefault.jpg)] // Thumbnail
-(https://www.youtube.com/embed/188UED5zLjM "Click to play on Youtube.com")    // Video Link
+[![Watch youtube video](https://img.youtube.com/vi/188UED5zLjM/maxresdefault.jpg)](https://www.youtube.com/embed/188UED5zLjM "Click to play on Youtube.com")
