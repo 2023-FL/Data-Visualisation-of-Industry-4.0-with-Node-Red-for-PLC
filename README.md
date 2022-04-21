@@ -72,7 +72,7 @@ Step 12.2: Plug out the power from the PLC and then power on it again after 1 mi
 
 (This fundamental tutorial about how to carry out data visualisation with Node-Red for PLC, it supposes that you have basic knowledge on installing Node.js, Node-Red and XMAPP database server firstly)
 
-[![video](https://img.youtube.com/vi/188UED5zLjM/0.jpg)](https://www.youtube.com/embed/188UED5zLjM "Click to play on Youtube.com")
-[![video](<iframe width="560" height="315" src="https://www.youtube.com/embed/188UED5zLjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen</iframe>)
-[![video](<div class="container"> 
+[![](https://img.youtube.com/vi/188UED5zLjM/0.jpg)](https://www.youtube.com/embed/188UED5zLjM "Click to play on Youtube.com")
+[![](https://img.youtube.com/vi/188UED5zLjM/0.jpg)](<iframe width="560" height="315" src="https://www.youtube.com/embed/188UED5zLjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen</iframe>)
+[![](https://img.youtube.com/vi/188UED5zLjM/0.jpg)](<div class="container"> 
   <iframe class="responsive-iframe" src="https://www.youtube.com/embed/188UED5zLjM"></iframe></div>)
