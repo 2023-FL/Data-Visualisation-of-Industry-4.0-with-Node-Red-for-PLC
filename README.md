@@ -68,9 +68,10 @@ Step 11.2: After selecting the Node-red dashboard of HOME FLOOR PLAN shown as fo
 Step 12: Trouble Shooting. When you found out any problem of “connection lost” in between PLC, the simulation of monitor function of Mitsubishi GX Works software and Node-red dashboard software, you can turn off the Node-Red dashboard and start it again by following steps.
  Step 12.1: Click Command Line Window and press “Ctrl + C” button for stopping Nod-Red, then key in “Y”, then the Node-Red program will be turned off.
 Step 12.2: Plug out the power from the PLC and then power on it again after 1 minute; go back step 8, key in “node-red” on command line window again for starting Node-red program and follow step 9 to step 11 again.
+
 ![image](https://user-images.githubusercontent.com/57984642/164304480-019154fa-1bc9-4b57-a4b0-ddc5dd700683.png)
 
-(This fundamental tutorial about how to carry out data visualisation with Node-Red for PLC, it supposes that you have basic knowledge on installing Node.js, Node-Red and XMAPP database server firstly)
+(This fundamental tutorial about how to carry out data visualisation with Node-Red for PLC, it supposes that you have basic knowledge on installing Node.js, Node-Red, XMAPP database server and know how to code PLC ladder program at all firstly)
 
 [![Watch the video](https://img.youtube.com/vi/188UED5zLjM/0.jpg)](https://www.youtube.com/embed/188UED5zLjM "Click to play on Youtube.com")
 
