@@ -75,4 +75,3 @@ Step 12.2: Plug out the power from the PLC and then power on it again after 1 mi
 
 [![Watch the video](https://img.youtube.com/vi/188UED5zLjM/0.jpg)](https://www.youtube.com/embed/188UED5zLjM "Click to play on Youtube.com")
 
-<video src='https://www.youtube.com/embed/188UED5zLjM' width=180/>
